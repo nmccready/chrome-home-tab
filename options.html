@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+
+<link rel="stylesheet" type="text/css" media="screen,projection" href="css/style.css" />
+<script src="js/default.js"></script>
+<script src="js/style.js"></script>
+
+<title>Options: Home New Tab page</title>
+
+<style>
+h1 {  line-height:60px; background:#222; border-radius: 8px 8px 0 0; text-align: center; color:#fff; cursor:default;
+		background: -webkit-gradient(
+			linear,center top,center bottom,
+			from(rgba(70, 70, 70, 1)),
+			color-stop(50%,rgba(30, 30, 30, 1)),
+			to(rgba(20, 20, 20, 1)));
+}
+h2 { text-shadow: 1px 1px #ddd; margin:30px 0 20px; cursor:default; font-size:26px; }
+label { font-size:16px; font-weight: bold; text-shadow: 1px 1px #ddd; display: block; margin:10px 0;}
+select { font-weight: bold; width:60px;  margin-left:15px;  }
+select, input { font-size:16px;}
+input { margin-right: 8px; }
+
+.options { background:rgba(200,200,200,.95); border-radius: 8px; top:30px; left:20%; right:20%;  position:absolute; box-shadow: 0 10px 20px rgba(0, 0, 0, .25); padding-bottom:80px;
+ box-sizing:border-box; color:#222; z-index:10; /*-webkit-transform:translate3d(0, 1000px, 0); -webkit-transition:-webkit-transform 1s; */ }
+.options-content { padding:30px 40px; }
+.option-name { width:120px; display:inline-block;}
+button { font-size:14px; padding:2px 0; width:93px; display:block; clear:both; }
+
+#options-note, #options-please { position: absolute; bottom:10px; width:100%; text-align: center; font-weight: bold; text-shadow: 1px 1px #ddd; }
+#options-please { font-size:16px; bottom:40px;  }
+#background-option-right { vertical-align: top; }
+#background-option-left { float:left; margin-right:20px; }
+#background-option img { border-radius:3px; margin-bottom:6px; }
+a { color:#c31000; text-decoration: none; }
+#background-option-right select { width:93px; margin:0; }
+@media only screen and (max-height: 801px) {
+	.options { top:0; }
+	h1 { display:none; }
+}
+input[type="checkbox"] { -webkit-transform: scale(1.5); zoom: 1.01; top: 2px; position: relative; }
+/*
+#options-overlay { z-index:5; background:#000; opacity:.2; width:100%; height: 100%; position: absolute;
+background-image: -webkit-gradient( linear,center top,center bottom, from(rgba(0, 0, 0, 0.01)), color-stop(75%,rgba(0, 0, 0, 0.001)), to(rgba(0, 0, 0, 0.33))), -webkit-gradient( linear,left center,right center, from(rgba(0, 0, 0, 0.25)), color-stop(25%,rgba(0, 0, 0, 0.001)), color-stop(75%,rgba(0, 0, 0, 0.001)), to(rgba(0, 0, 0, 0.25))); }
+*/
+
+</style>
+</head>
+<body>
+
+<div id="page">
+<div id="page-gradient">
+
+	<div class="options">
+		<h1>Options: Home New Tab page</h1>
+		<div class="options-content">
+				<label><div class="option-name">Fetch interval</div>
+					<select id="fetch_interval"><option value="1">1m</option><option value="5">5m</option><option value="15">15m</option><option value="30">30m</option></select>
+				</label>
+				<label><div class="option-name">Time format</div> <select id="time_format"><option value="12">12h</option><option value="24">24h</option></select></label>
+				<h2>Notification Center</h2>
+				<div id="notification-options"></div>
+				<h2>Background</h2>
+				<div id="background-option">
+					<div id="background-option-left">
+						<img src="../img/bg.png" id="background-preview" width="90px" height="90px" />
+						<button id="default-background">Default</button>
+					</div>
+					<div id="background-option-right">
+						<input type="file" id="background_image" /> <br/><br/>		
+						<select id="background_style">
+							<option value="tile">Tile</option>
+							<option value="fill">Fill</option>
+							<option value="stretch">Stretch</option>
+						</select>
+						<label><input type="checkbox" id="background_gradient" /> Gradient effect</label>
+						<label><input type="checkbox" id="background_fadein" /> Fade in effect</label>
+				
+					</div>
+				</div>
+				<div id="options-please">If you <i>love</i> this extension please consider writing a <a href="https://chrome.google.com/webstore/detail/ehhkfhegcenpfoanmgfpfhnmdmflkbgk/reviews" target="_blank">review</a>. Thanks!</div>
+				<div id="options-note">(some options may require browser restart)</div>
+			</div>
+	</div>
+
+</div>
+</div>  <!-- end of page -->
+
+<div id="options-overlay"</div>
+
+<script src="js/options.js"></script>
+
+</body>
+</html>

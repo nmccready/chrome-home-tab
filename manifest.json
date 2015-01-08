@@ -1,0 +1,26 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "chrome_url_overrides": {
+      "newtab": "index.html"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "js/content_script.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_start"
+   } ],
+   "description": "A homepage you will fall in love with! Notifications, badges, recently closed tabs, quick notes and more.",
+   "icons": {
+      "128": "icons/logo128.png",
+      "48": "icons/logo48-2.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDQLTrw3Ol43TC482YiOAdhMeAa9n7pxO6y3LBor1qAZYq6Me0Psd48nSdB1mPtm1FHVfaEcCOlolZwirLe0YhpeGXNqpMqWnqAZxgJ/TcBpvpxbGqWFpemkGepVKD9szurGxaiLvFfz5OZCbkeUVW3/+RlMw0wMKZwc86nZNIHlwIDAQAB",
+   "manifest_version": 2,
+   "name": "Home - New Tab Page",
+   "options_page": "options.html",
+   "permissions": [ "bookmarks", "tabs", "management", "notifications", "chrome://favicon/", "http://*/*", "https://*/*", "\u003Call_urls>", "webNavigation", "webRequest", "storage", "unlimitedStorage" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "0.8.16"
+}
