@@ -260,7 +260,7 @@ body {
 #apps-wrapper {
 	position:absolute;
 	width:52%;
-	right:2%;
+	/*right:2%;*/
 	height:100%;
 	z-index: 1;
 
