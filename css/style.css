@@ -259,7 +259,7 @@ body {
 
 #apps-wrapper {
 	position:absolute;
-	width:52%;
+	width:100%;
 	/*right:2%;*/
 	height:100%;
 	z-index: 1;
@@ -267,14 +267,15 @@ body {
 }
 
 #apps-slider {
-	overflow:hidden;
-  margin-left: 150px;
+  white-space: nowrap;
+	overflow:auto;
+  margin-left: 50px;
 	height:100%;
 	/*width:760px;*/
   width:100%;
 	padding-top:26px;
 
-	position: relative;
+	/*position: relative;*/
 	box-sizing: border-box;
 	/**/
 	/*-webkit-transform: translateZ(0);*/
@@ -282,6 +283,9 @@ body {
 }
 
 #apps-pages-list {
+  overflow-x:scroll;
+  white-space: nowrap;
+	overflow:auto;
 	position:absolute;
 	width: 100%;
   /*width:10000px;*/
